@@ -2,53 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Glowing Circle</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Glowing Ring with Centered Image</title>
     <link rel="stylesheet" href="Hero.css" />
 </head>
 <body>
 <div class="circle-loader">
-    <!-- 40 glowing segments -->
-    <div class="segment" style="--i: 0"></div>
-    <div class="segment" style="--i: 1"></div>
-    <div class="segment" style="--i: 2"></div>
-    <div class="segment" style="--i: 3"></div>
-    <div class="segment" style="--i: 4"></div>
-    <div class="segment" style="--i: 5"></div>
-    <div class="segment" style="--i: 6"></div>
-    <div class="segment" style="--i: 7"></div>
-    <div class="segment" style="--i: 8"></div>
-    <div class="segment" style="--i: 9"></div>
-    <div class="segment" style="--i: 10"></div>
-    <div class="segment" style="--i: 11"></div>
-    <div class="segment" style="--i: 12"></div>
-    <div class="segment" style="--i: 13"></div>
-    <div class="segment" style="--i: 14"></div>
-    <div class="segment" style="--i: 15"></div>
-    <div class="segment" style="--i: 16"></div>
-    <div class="segment" style="--i: 17"></div>
-    <div class="segment" style="--i: 18"></div>
-    <div class="segment" style="--i: 19"></div>
-    <div class="segment" style="--i: 20"></div>
-    <div class="segment" style="--i: 21"></div>
-    <div class="segment" style="--i: 22"></div>
-    <div class="segment" style="--i: 23"></div>
-    <div class="segment" style="--i: 24"></div>
-    <div class="segment" style="--i: 25"></div>
-    <div class="segment" style="--i: 26"></div>
-    <div class="segment" style="--i: 27"></div>
-    <div class="segment" style="--i: 28"></div>
-    <div class="segment" style="--i: 29"></div>
-    <div class="segment" style="--i: 30"></div>
-    <div class="segment" style="--i: 31"></div>
-    <div class="segment" style="--i: 32"></div>
-    <div class="segment" style="--i: 33"></div>
-    <div class="segment" style="--i: 34"></div>
-    <div class="segment" style="--i: 35"></div>
-    <div class="segment" style="--i: 36"></div>
-    <div class="segment" style="--i: 37"></div>
-    <div class="segment" style="--i: 38"></div>
-    <div class="segment" style="--i: 39"></div>
+    <!-- Glowing ring behind image -->
+    <div class="glow-ring"></div>
+
+    <!-- Centered image inside the ring -->
+    <img src="assets/images/hacker-binary-code-background_1149118-906.avif" alt="Profile Image" class="center-image" />
 </div>
+
+<script>
+    const loader = document.querySelector('.circle-loader');
+    const segmentCount = 40;
+
+    for (let i = 0; i < segmentCount; i++) {
+        const seg = document.createElement('div');
+        seg.className = 'segment';
+        const rotation = i * (360 / segmentCount);
+        seg.style.transform = `translate(-50%, -50%) rotate(${rotation}deg) translateY(-95px)`;
+        seg.style.animationDelay = `${i * 0.06}s`;
+        loader.appendChild(seg);
+    }
+</script>
 </body>
 </html>
