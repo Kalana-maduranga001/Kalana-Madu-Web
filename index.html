@@ -3,12 +3,20 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Glowing Ring with Centered Image</title>
+
+    <title>KALANA MADURANGA</title>
+
     <link rel="stylesheet" href="assets/lib/normalize.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="heder.css">
     <link rel="stylesheet" href="Hero.css" />
+    <link rel="stylesheet" href="icone.css" />
 
 
     </head>
@@ -35,45 +43,46 @@
         </label>
     </nav>
 </header>
+<div class="circle-loader">
 
-    <div class="circle-loader">
-<!--        <div class="social-icons" style="right: 100px">-->
+    <!-- Left Social Icons -->
+    <div class="social-icon-container left">
+        <div class="icon-ring">
+            <a href="https://github.com/" target="_blank" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+        <div class="icon-ring">
+            <a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </div>
+    </div>
 
-<!--            <a href="https://facebook.com/" target="_blank" aria-label="Twitter">-->
-<!--                <i class="fab fa-facebook"></i>-->
-<!--            </a>-->
 
-<!--            <a href="https://twitter.com/" target="_blank" aria-label="Twitter">-->
-<!--                <i class="fab fa-twitter"></i>-->
-<!--            </a>-->
+    <!-- Right Social Icons -->
+    <div class="social-icon-container right">
+        <div class="icon-ring">
+            <a href="https://facebook.com/" target="_blank" aria-label="Facebook">
+                <i class="fab fa-facebook"></i>
+            </a>
+        </div>
+        <div class="icon-ring">
+            <a href="https://twitter.com/" target="_blank" aria-label="Twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </div>
+    </div>
 
-<!--        </div>-->
+</div>
 
         <!-- Glowing ring behind image -->
         <div class="glow-ring">
             <img src="assets/images/hacker-binary-code-background_1149118-906.avif" alt="Profile Image" class="center-image" />
         </div>
         <!-- Centered image inside the ring -->
-
-
-
-<!--        <div class="social-icons">-->
-<!--            <a href="https://github.com/" target="_blank" aria-label="GitHub">-->
-<!--                <i class="fab fa-github"></i>-->
-<!--            </a>-->
-<!--            <a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn">-->
-<!--                <i class="fab fa-linkedin-in"></i>-->
-<!--            </a>-->
-<!--        </div>-->
     </div>
 
-
-<!--<a href="#about-me" class="cta-circle">-->
-<!--                <span class="circle-icon">-->
-<!--                    <i class="fa-solid fa-arrow-down"></i>-->
-<!--                </span>-->
-<!--    <span class="text">ABOUT ME</span>-->
-<!--</a>-->
 
 <script>
     const loader = document.querySelector('.circle-loader');

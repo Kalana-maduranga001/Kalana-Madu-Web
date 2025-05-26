@@ -1,0 +1,67 @@
+
+
+
+/* Social icon containers */
+.social-icon-container {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    z-index: 3;
+}
+
+.social-icon-container.left {
+    left: 8%;
+}
+
+.social-icon-container.right {
+    right: 8%;
+}
+
+/* Wrapper for ring + icon */
+.icon-ring {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Rotating ring */
+.icon-ring::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 3px solid transparent;
+    border-top: 3px solid #00ff00;
+    border-right: 3px solid #00ff00;
+    border-radius: 50%;
+    animation: spinRing 1.2s linear infinite;
+    z-index: -1;
+}
+
+/* Icon styles */
+.icon-ring i {
+    font-size: 30px;
+    color: #00ff00;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.icon-ring i:hover {
+    transform: scale(1.3);
+    color: #ffffff;
+}
+
+/* Actual rotating animation */
+@keyframes spinRing {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
