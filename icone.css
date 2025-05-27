@@ -23,8 +23,16 @@
     left: 5%;
 }
 
+/* Right side tilt */
+.social-icon-container.right .icon-ring:nth-child(1) { transform: translate(20px, -120px); }
+.social-icon-container.right .icon-ring:nth-child(2) { transform: translate(40px, -60px); }
+.social-icon-container.right .icon-ring:nth-child(3) { transform: translate(60px, 0); }
+.social-icon-container.right .icon-ring:nth-child(4) { transform: translate(40px, 60px); }
+.social-icon-container.right .icon-ring:nth-child(5) { transform: translate(20px, 120px); }
+
+
 .social-icon-container.right {
-    right: 8%;
+    right: 5%;
 }
 
 /* Wrapper for ring + icon */
@@ -35,40 +43,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    opacity: 0;
+    animation: loadIcon 0.8s forwards;
 }
 
-/* Rotating ring */
-.icon-ring::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border: 3px solid transparent;
-    border-top: 3px solid #00ff00;
-    border-right: 3px solid #00ff00;
-    border-radius: 50%;
-    animation: spinRing 1.2s linear infinite;
-    z-index: -1;
-}
+.icon-ring:nth-child(1) { animation-delay: 0.2s; }
+.icon-ring:nth-child(2) { animation-delay: 0.4s; }
+.icon-ring:nth-child(3) { animation-delay: 0.6s; }
+.icon-ring:nth-child(4) { animation-delay: 0.8s; }
+.icon-ring:nth-child(5) { animation-delay: 1s; }
 
-/* Icon styles */
-.icon-ring i {
-    font-size: 30px;
-    color: #00ff00;
-    transition: transform 0.3s ease, color 0.3s ease;
-}
 
-.icon-ring i:hover {
-    transform: scale(1.3);
-    color: #ffffff;
-}
-
-/* Actual rotating animation */
-@keyframes spinRing {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
