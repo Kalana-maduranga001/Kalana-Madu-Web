@@ -50,3 +50,23 @@ body {
         opacity: 1;
     }
 }
+
+
+
+/*mobile device support media query*/
+
+@media (max-width: 768px) {
+    .center-image {
+        width: 200px;
+        height: 200px;
+        top: 60%;
+    }
+
+    .social-icon-container.left {
+        left: 3%;
+    }
+
+    .social-icon-container.right {
+        right: 3%;
+    }
+}

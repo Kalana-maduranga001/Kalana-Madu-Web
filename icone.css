@@ -1,6 +1,4 @@
 
-
-
 /* Social icon containers */
 .social-icon-container {
     position: absolute;
@@ -8,12 +6,21 @@
     transform: translateY(-50%);
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 40px;
     z-index: 3;
+    animation: fadeInIcons 1s ease-in-out;
 }
 
+/* Left side tilt */
+.social-icon-container.left .icon-ring:nth-child(1) { transform: translate(-20px, -120px); }
+.social-icon-container.left .icon-ring:nth-child(2) { transform: translate(-40px, -60px); }
+.social-icon-container.left .icon-ring:nth-child(3) { transform: translate(-60px, 0); }
+.social-icon-container.left .icon-ring:nth-child(4) { transform: translate(-40px, 60px); }
+.social-icon-container.left .icon-ring:nth-child(5) { transform: translate(-20px, 120px); }
+
 .social-icon-container.left {
-    left: 8%;
+    left: 5%;
 }
 
 .social-icon-container.right {
