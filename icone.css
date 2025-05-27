@@ -79,3 +79,21 @@
     z-index: -1;
 }
 
+/* Animations */
+@keyframes spinRing {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes loadIcon {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeInIcons {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
